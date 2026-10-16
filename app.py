@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -15,11 +14,10 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_DIR = BASE_DIR / "models"
 
 MODEL_PATHS = {
-    "SVM": MODEL_DIR / "svm_model.pkl",
-    "Naive Bayes": MODEL_DIR / "naive_bayes_model.pkl",
+    "SVM": BASE_DIR / "svm_model.pkl",
+    "Naive Bayes": BASE_DIR / "naive_bayes_model.pkl",
 }
 
 THRESHOLD = 0.30
